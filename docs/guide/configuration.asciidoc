@@ -244,7 +244,7 @@ resp.meta.status  # Can be either '2XX' or '404'
 # API request is robust against the index already existing:
 resp = es.options(ignore_status=[400]).indices.create(
     index="create-this",
-    mapping={
+    mappings={
         "properties": {"field": {"type": "integer"}}
     }
 )
